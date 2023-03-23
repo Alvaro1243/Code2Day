@@ -22,9 +22,12 @@ const pwdRepError = document.getElementById("pwdRepError")
 
 const enviarButton = document.getElementById("enviar")
 const cancelarButton = document.getElementById("cancelar")
+const formulario = document.getElementById("formulario")
 
 enviarButton.addEventListener("click",function(){
-  window.alert("Se ha inscrito correctamente al curso")
+  if(formulario[0].checkValidity()){
+    window.alert("Se ha inscrito correctamente al curso")
+  }
 })
 
 cancelarButton.addEventListener("click",function(){
