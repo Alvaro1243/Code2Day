@@ -22,7 +22,7 @@
                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="cursos.html">Cursos</a>
+                <a class="nav-link" href="cursos.html">Cursos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
@@ -35,7 +35,7 @@
         </div>
       </nav>
 
-    <form id = "formulario">
+    <form id = "formulario" action="cursos.html">
         <div class="p-2 row bg-light">
             <legend>Información personal</legend>
         </div>
@@ -69,6 +69,7 @@
                 <span class="text-danger" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
                 <label for="repetirContraseña" class="form-label"><strong>Repita la contraseña</strong><span class="text-danger fs-5">*</span></label>
                 <input type="password" class="form-control" id="repitaContraseña" required>
+                <span class="text-danger" id="pwdRepError">Las contraseñas no coinciden</span><br/>
             </div>
         </div>
         <div class="p-2 row bg-light">
@@ -76,19 +77,13 @@
         </div>
         <div class="p-3 row">
             <div class="col-4">
-                <label for="calle" class="form-label"><strong>Calle</strong></label><br/>
-                <input type="text" class="form-control" id="calle">
-                <label for="numero" class="form-label"><strong>Número</strong></label>
-                <input type="number" class="form-control" id="numero">
-                <label for="PlantaPuerta"class="form-label"><strong>Planta/Puerta</strong></label>
-                <input type="text" class="form-control" id="PlantaPuerta">
                 <label for="telefono" class="form-label"><strong>Teléfono</strong><span class="text-danger fs-5">*</span></label>
                 <input type="text" class="form-control" id="telefono" required>
             </div>
         </div>
         <div class="p-3">
-            <input type="submit" value="Enviar" class="btn bg-primary text-light">
-            <input type="submit" value="Cancelar" class="btn border-opacity-10">
+            <input type="submit" value="Enviar" class="btn bg-primary text-light" id="enviar">
+            <input type="submit" value="Cancelar" class="btn border-opacity-10" id="cancelar">
         </div>
       </form>
       <script src="./javascript/formulario.js"></script>
