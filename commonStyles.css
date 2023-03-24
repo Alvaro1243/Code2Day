@@ -1,5 +1,6 @@
 #logo{
     height: 50px;
+    padding-left: 20px;
 }
 
 #footer {
@@ -11,3 +12,32 @@
 .star i {
     color: darkgoldenrod;
 }
+
+nav ul {
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+#home {
+    background-image: linear-gradient(to bottom right, #7B9DCC, #576490);
+    height: 50vh;
+}
+
+#headtext {
+    color: white;
+    padding-top: 40px;
+}
+
+#ptext {
+    color: white;
+}
+
+#buttons {
+    padding-top: 40px;
+}
+
