@@ -44,3 +44,23 @@ nav ul li {
 .page {
     margin-top: 40px;
 }
+
+#footer a {
+    color: white;
+}
+
+#footer {
+    padding: 20px;
+}
+
+.btn {
+    border-radius: 20px;
+  }
+
+#row {
+    padding: 20px;
+}
+
+#card h4{
+    margin-top: 10px;
+}
