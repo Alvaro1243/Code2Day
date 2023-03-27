@@ -9,8 +9,9 @@
     width: 100%;
 }
 
-.star i {
+#star {
     color: darkgoldenrod;
+    padding-top: 10px;
 }
 
 nav ul {

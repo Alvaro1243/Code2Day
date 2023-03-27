@@ -54,20 +54,18 @@ function showGallery(currarray) {
   for(var i=0; i<currarray.length; i++) {
     var rating = "";
     for(var j=0; j<currarray[i].rating; j++) {
-      rating += '<i class="bi bi-star-fill"></i>';
+      rating += '<i id="star" class="fa fa-star"></i>';
     }
-    for(var k=0; k<5-currarray[i].rating; k++) {
-      rating += '<i class="bi bi-star"></i>';
-    }
+
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
         <img src="${currarray[i].image}"/>
         <h4 class="text-capitalize text-center">${currarray[i].title}</h4>  
-        <p class="mt-2">${currarray[i].description}</p>
         <div class="d-flex justify-content-center">
-          ${rating}
-        </div>
+        ${rating}
+      </div>
+        <p class="mt-2">${currarray[i].description}</p>
         <a href="formulario.html" class="btn btn-primary">Inscribirse</a>
       </div>
     </div>`
