@@ -7,16 +7,18 @@
         rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
         crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="commonStyles.css" />    
 </head>
 <body>
+
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Logo</a>
+      <a class="navbar-brand" href="index.html"><img src="images/logo2.PNG" id="logo" class="card-img-top" alt="Image not found"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
@@ -26,18 +28,32 @@
           <li class="nav-item">
             <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
           </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="perfil.html">Perfil</a>
+          </li>
         </ul>
-        <span class="navbar-text">
-          <a class="nav-link" href="perfil.html">Perfil</a>
-        </span>
       </div>
     </div>
   </nav>
 
+
+<section id="home">
+  <header id="myheader">
+    <h1 id="headtext" class="text-center">Bienvenido a Code2Day!</h1></br>
+  </header>
+  <p id="ptext" class="text-center">Descubre una gran variedad de cursos de programación.</p>
+  <div id="buttons" class="content container text-center">
+    <a class="btn btn-primary" href="#" role="button">Learn More</a>
+    <a class="btn btn-primary" href="cursos.html" role="button">Ver Cursos</a>
+  </div>
+</section>
+
+
+
 <div class="page" id="services">
-        <div class="content container ">
+        <div class="content container text-center">
           <h1>¿Qué ofrecemos?</h1>
-          <div class="row">
+          <div id="row" class="row">
             <article class="service col-md-4 col-sm-6 col-xs-12">
               <img class="icon mx-auto d-block" src="images/inspiracion.png" alt="Icon" width="100" height="100">
               <h3 class="text-center">Aprende lo que desees </h3>
@@ -53,17 +69,16 @@
             <article class="service col-md-4 col-sm-6 col-xs-12">
               <img class="icon mx-auto d-block" src="images/certificado.png" alt="Icon" width="100" height="100">
               <h3 class="text-center">Certificados ilimitados</h3>
-              <p class="text-center">Obtén un certificado por cada programa de aprendizaje que completes sin costo.</p>
+              <p class="text-center">Obtén un certificado por cada programa de aprendizaje que completes sin costo.</p></br>
             </article>
-    
           </div><!-- row -->   
         </div><!-- content container -->
       </div><!-- services page -->
     
     
-      <div class="page bg-warning" id="testimonios">
-        <div class="content container">
-          <h1>Testimonios de Usuarios</h1>
+      <div class="page" id="testimonios">
+        <div class="content container text-center">
+          <h1>Testimonios de Usuarios</h1></br>
           <div class="row">
             <blockquote class="col-md-6 col-lg-3" id="janeh">
               <div class="quote">
@@ -99,18 +114,18 @@
       </div><!-- testimonials page -->
     </div><!-- main -->
     
-    <footer>
+    <footer id="footer" class="bg-dark text-white">
       <div class="content container-fluid">
         <div class="row">
           <div class="col-sm-6">
             <p>Contacte con nosotros en <span class="phone">0619985798@uma.es</span></p>
-            <p>All contents &copy; 2023 <a href="https://www.uma.es/" class="text-dark text-decoration-none">uma.es</a> Todos los derechos reservados.</p>    
+            <p>All contents &copy; 2023 <a href="https://www.uma.es/">uma.es</a> Todos los derechos reservados.</p>    
           </div><!-- col-sm-6 -->
           <div class="col-sm-6">
             <nav class="navbar navbar-default" role="navigation">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="text-dark text-decoration-none">Terms of use</a></li>
-                <li><a href="#" class="text-dark text-decoration-none">Privacy policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy policy</a></li>
               </ul>
             </nav>        
           </div><!-- col-sm-6 -->
