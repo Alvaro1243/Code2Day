@@ -3,11 +3,25 @@
     padding-left: 20px;
 }
 
-#footer {
-    position: relative;
-    bottom: 0;
+html, body {
     width: 100%;
-}
+    height: 100%;
+    margin: 0;
+  }
+  
+  #wrapper {
+    min-height: 100%;
+    margin-bottom: -100px;
+  }
+  
+  #content {
+    padding-bottom: 100px;
+  }
+  
+  #footer {
+    height: 100px;
+    width: 100%;
+  }
 
 #star {
     color: darkgoldenrod;
@@ -51,7 +65,7 @@ nav ul li {
 }
 
 #footer {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .btn {

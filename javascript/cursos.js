@@ -84,6 +84,7 @@ document.getElementById("myinput").addEventListener("keyup", function() {
 
   if(this.value == "") {
     showGallery(courses);
+    document.getElementById("para").style.display = 'none';  
   } else {
     if(filter == "") {
       document.getElementById("para").style.display = 'block';  
