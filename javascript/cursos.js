@@ -42,6 +42,27 @@ let courses = [
     rating: 5,
     description: 'En este curso aprenderás...',
     date: '20/03/2023'
+  },
+  {
+    title: 'Curso R',
+    image: 'images/R.png',
+    rating: 5,
+    description: 'En este curso aprenderás...',
+    date: '20/03/2023'
+  },
+  {
+    title: 'Curso CSS',
+    image: 'images/css.jpg',
+    rating: 5,
+    description: 'En este curso aprenderás...',
+    date: '20/03/2023'
+  },
+  {
+    title: 'Curso PHP',
+    image: 'images/php.jpg',
+    rating: 5,
+    description: 'En este curso aprenderás...',
+    date: '20/03/2023'
   }
 ];
 
