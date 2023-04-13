@@ -34,43 +34,38 @@ function showGallery(currarray) {
       rating += '<i id="star" class="fa fa-star"></i>';
     }
 
-    document.getElementById("card").innerHTML += ` 
-      <div class="col-md-4 mt-3">
+    var cardElement = document.createElement("div");
+    cardElement.classList.add("col-md-4", "mt-3");
+    cardElement.innerHTML = `
       <div class="card p-3 ps-5 pe-3">
-      <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"><img src="${currarray[i].image}"/></a>
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"><h4 class="text-capitalize text-center">${currarray[i].title}</h4></a>
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}">
+          <img src="${currarray[i].image}" />
+        </a>
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}">
+          <h4 class="text-capitalize text-center">${currarray[i].title}</h4>
+        </a>
         <div class="d-flex justify-content-center">
-        ${rating}
-      </div>
+          ${rating}
+        </div>
         <p class="mt-2">${currarray[i].description}</p>
         <a href="" class="btn btn-primary">Ir al Curso</a><br>
-        <a href="" class="btn btn-primary">Eliminar Curso</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Eliminar Curso
+        </button>
       </div>
-    </div>`
+    `;
+
+    // Add event listener to the "Eliminar Curso" button
+    var deleteButton = cardElement.querySelector("button");
+    deleteButton.addEventListener("click", function() {
+      var card = this.parentNode;
+      // Open the Bootstrap modal and set up the "Sí" button to delete the card
+      var modal = document.getElementById("exampleModal");
+      modal.querySelector("#eliminar").addEventListener("click", function() {
+        card.parentNode.removeChild(card);
+      });
+    });
+
+    document.getElementById("card").appendChild(cardElement);
   }
 }
-
-document.getElementById("myinput").addEventListener("keyup", function() {
-    let text = document.getElementById("myinput").value.toLowerCase();
-    
-    filter = courses.filter(function(x) {
-      if(x.title.toLowerCase().includes(text)) {
-        return x.title; 
-      }
-    });
-  
-    if(this.value == "") {
-      showGallery(courses);
-      document.getElementById("para").style.display   = 'none';  
-    } else {
-      if(filter == "") {
-        document.getElementById("para").style.display = 'block';  
-        document.getElementById("card").innerHTML = "";  
-      } else {
-        showGallery(filter);
-        document.getElementById("para").style.display = 'none';  
-      }
-    }
-  });
-  
-  
