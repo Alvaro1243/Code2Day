@@ -1,26 +1,26 @@
 let courses = [
-    {
-      title: 'Curso HTML',
-      image: 'images/html.jpg',
-      rating: 5,
-      description: 'Aprende a crear páginas web efectivas y funcionales, cubriendo la estructura básica de una página y etiquetas HTML.',
-      date: '20/03/2023'
-    },
-    {
-      title: 'Curso Java',
-      image: 'images/java.jpg',
-      rating: 3,
-      description: 'En este curso aprenderás conceptos básicos como variables, estructuras de control, tipos de datos y programación orientada a objetos.',
-      date: '20/03/2023'
-    }, 
-    {
-      title: 'Curso Python',
-      image: 'images/Python.jpg',
-      rating: 5,
-      description: 'Mejora tus habilidades de programacion en este curso avanzado de este lenguaje de alto nivel',
-      date: '20/03/2023'
-    }
-  ];
+  {
+    title: 'Curso HTML',
+    image: 'images/html.jpg',
+    rating: 5,
+    description: 'Aprende a crear páginas web efectivas y funcionales, cubriendo la estructura básica de una página y etiquetas HTML.',
+    date: '20/03/2023'
+  },
+  {
+    title: 'Curso Java',
+    image: 'images/java.jpg',
+    rating: 3,
+    description: 'En este curso aprenderás conceptos básicos como variables, estructuras de control, tipos de datos y programación orientada a objetos.',
+    date: '20/03/2023'
+  },
+  {
+    title: 'Curso Python',
+    image: 'images/Python.jpg',
+    rating: 5,
+    description: 'Mejora tus habilidades de programacion en este curso avanzado de este lenguaje de alto nivel',
+    date: '20/03/2023'
+  }
+];
 
 showGallery(courses);
 
@@ -28,9 +28,9 @@ function showGallery(currarray) {
 
   document.getElementById("card").innerText = "";
 
-  for(var i=0; i<currarray.length; i++) {
+  for (var i = 0; i < currarray.length; i++) {
     var rating = "";
-    for(var j=0; j<currarray[i].rating; j++) {
+    for (var j = 0; j < currarray[i].rating; j++) {
       rating += '<i id="star" class="fa fa-star"></i>';
     }
 
@@ -57,15 +57,30 @@ function showGallery(currarray) {
 
     // Add event listener to the "Eliminar Curso" button
     var deleteButton = cardElement.querySelector("button");
-    deleteButton.addEventListener("click", function() {
+    deleteButton.addEventListener("click", function () {
       var card = this.parentNode;
       // Open the Bootstrap modal and set up the "Sí" button to delete the card
       var modal = document.getElementById("exampleModal");
-      modal.querySelector("#eliminar").addEventListener("click", function() {
-        card.parentNode.removeChild(card);
+      modal.querySelector("#eliminar").addEventListener("click", function () {
+        var nodeList = card.childNodes;
+        var node = nodeList[3];
+        nodeList = node.childNodes;
+        var curso = nodeList[1];
+        var index = courses.findIndex(c => c.title == curso.textContent);
+        var parent = card.parentNode.parentNode;
+        var i =0;
+        while (i<parent.childNodes.length){
+          i = i+1;
+          parent.removeChild(parent.firstChild);	
+        }
+        courses.splice(index, 1);
+        showGallery(courses);
       });
     });
 
     document.getElementById("card").appendChild(cardElement);
   }
 }
+
+
+
