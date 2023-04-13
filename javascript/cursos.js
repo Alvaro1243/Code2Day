@@ -81,7 +81,7 @@ function showGallery(currarray) {
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
-      <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"><img src="${currarray[i].image}"/></a>      </a>
+      <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"><img src="${currarray[i].image}"/></a>
         <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"><h4 class="text-capitalize text-center">${currarray[i].title}</h4></a>
         <div class="d-flex justify-content-center">
         ${rating}
@@ -105,7 +105,7 @@ document.getElementById("myinput").addEventListener("keyup", function() {
 
   if(this.value == "") {
     showGallery(courses);
-    document.getElementById("para").style.display = 'none';  
+    document.getElementById("para").style.display   = 'none';  
   } else {
     if(filter == "") {
       document.getElementById("para").style.display = 'block';  
@@ -118,7 +118,9 @@ document.getElementById("myinput").addEventListener("keyup", function() {
 });
 
 
-// Add an event listener to each course card
+
+
+//open detallescurso.html
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
   card.addEventListener('click', () => {
@@ -126,9 +128,7 @@ cards.forEach(card => {
     const image = card.querySelector('img').src;
     const rating = card.querySelector('.fa-star').length;
     const description = card.querySelector('p').textContent;
-    // const date = card.querySelector('.date').textContent;
 
-    // Construct the URL for the course details page and pass the course data as a query string
     const url = `detallescurso.html?title=${title}&image=${image}&rating=${rating}&description=${description}&date=${date}`;
 
     window.location.href = url;
