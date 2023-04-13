@@ -86,7 +86,7 @@ function showGallery(currarray) {
         <div class="d-flex justify-content-center">
         ${rating}
       </div>
-        <p class="mt-2">${currarray[i].description}</p>
+        <p class="mt-2"></p>
         <a href="formulario.html" class="btn btn-primary">Inscribirse</a>
       </div>
     </div>`
@@ -98,7 +98,7 @@ document.getElementById("myinput").addEventListener("keyup", function() {
   let text = document.getElementById("myinput").value.toLowerCase();
   
   filter = courses.filter(function(x) {
-    if(x.title.toLowerCase().includes(text)) {
+    if(x.title.toLowerCase().includes(text) || x.description.toLowerCase().includes(text)) {
       return x.title; 
     }
   });
@@ -116,8 +116,6 @@ document.getElementById("myinput").addEventListener("keyup", function() {
     }
   }
 });
-
-
 
 
 //open detallescurso.html

@@ -3,21 +3,21 @@ let courses = [
       title: 'Curso HTML',
       image: 'images/html.jpg',
       rating: 5,
-      description: 'En este curso aprenderás...',
+      description: 'Aprende a crear páginas web efectivas y funcionales, cubriendo la estructura básica de una página y etiquetas HTML.',
       date: '20/03/2023'
     },
     {
       title: 'Curso Java',
       image: 'images/java.jpg',
       rating: 3,
-      description: 'En este curso aprenderás...',
+      description: 'En este curso aprenderás conceptos básicos como variables, estructuras de control, tipos de datos y programación orientada a objetos.',
       date: '20/03/2023'
-    },
+    }, 
     {
       title: 'Curso Python',
       image: 'images/Python.jpg',
       rating: 5,
-      description: 'En este curso aprenderás...',
+      description: 'Mejora tus habilidades de programacion en este curso avanzado de este lenguaje de alto nivel',
       date: '20/03/2023'
     }
   ];
