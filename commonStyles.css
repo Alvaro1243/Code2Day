@@ -23,10 +23,6 @@ html, body {
     width: 100%;
   }
 
-#star {
-    color: darkgoldenrod;
-    padding-top: 10px;
-}
 
 nav ul {
     display: flex;
