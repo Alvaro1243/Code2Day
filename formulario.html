@@ -39,42 +39,40 @@
       </div>
     </div>
   </nav>
-
-<form id = "formulario" action="cursos.html">
-        <div class="p-2 row bg-light">
+<form id = "formulario" action="cursos.html" class = "container needs-validation" novalidate>
+    <div class = "mb-3">
+        <div class="p-2 row bg-light text-center">
             <legend>Información personal</legend>
         </div>
-    
-        <div class="p-3 row">
-          <div class="col-4">
+      
+        <div class="row align-items-start">
+          <div class="col-6">
             <label for="nombre" class="form-label"><strong>Nombre</strong><span class="text-danger fs-5">*</span></label>
             <input type="text" class="form-control" id="nombre" required>
-            <label for="primerApellido" class="form-label"><strong>Primer apellido</strong><span class="text-danger fs-5">*</span></label>
+            <label for="Apellidos" class="form-label"><strong>Apellidos</strong><span class="text-danger fs-5">*</span></label>
             <input type="text" class="form-control" id="primerApellido" required>
-            <label for="segundoApellido" class="form-label"><strong>Segundo apellido</strong><span class="text-danger fs-5">*</span></label>
-            <input type="text" class="form-control" id="segundoApellido" required>
-          </div>
-          <div class="col-2">
             <label for="fechaNacimiento" class="form-label"><strong>Fecha de nacimiento</strong><span class="text-danger fs-5">*</span></label>
             <input type="date" class="form-control" id="fechaNacimiento" required>
             <label for="genero" class="form-label"><strong>Género</strong><span class="text-danger fs-5">*</span></label><br>
             <input type="radio" id="genero" required> Hombre <br/><input type="radio" id="genero" required> Mujer
           </div>
         </div>
-
+      </div>
         <div class="p-2 row bg-light">
         <legend>Información de la cuenta</legend>
         </div>
         <div class="p-3 row">
             <div class="col-4">
                 <label for="correo" class="form-label"><strong>Correo electrónico</strong><span class="text-danger fs-5">*</span></label><br/>
-                <input type="text" class="form-control" id="correo" required>
+                <input type="email" class="form-control" id="correo" required>
+            <div class = "invalid-feedback">
+              el correo es invalido o no existe
+            </div>
                 <label for="contraseña" class="form-label"><strong>Contraseña</strong><span class="text-danger fs-5">*</span></label>
                 <input type="password" class="form-control" id="contraseña" required>
-                <span class="text-danger" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
+                <span class="form-text" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
                 <label for="repetirContraseña" class="form-label"><strong>Repita la contraseña</strong><span class="text-danger fs-5">*</span></label>
                 <input type="password" class="form-control" id="repitaContraseña" required>
-                <span class="text-danger" id="pwdRepError">Las contraseñas no coinciden</span><br/>
             </div>
         </div>
         <div class="p-2 row bg-light">

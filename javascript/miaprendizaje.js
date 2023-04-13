@@ -38,17 +38,17 @@ function showGallery(currarray) {
     cardElement.classList.add("col-md-4", "mt-3");
     cardElement.innerHTML = `
       <div class="card p-3 ps-5 pe-3">
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}">
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
           <img src="${currarray[i].image}" />
         </a>
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}">
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
           <h4 class="text-capitalize text-center">${currarray[i].title}</h4>
         </a>
         <div class="d-flex justify-content-center">
           ${rating}
         </div>
         <p class="mt-2">${currarray[i].description}</p>
-        <a href="" class="btn btn-primary">Ir al Curso</a><br>
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"&inscrito=${1} class="btn btn-primary">Ir al Curso</a><br>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Eliminar Curso
         </button>
