@@ -49,3 +49,28 @@ function showGallery(currarray) {
     </div>`
   }
 }
+
+document.getElementById("myinput").addEventListener("keyup", function() {
+    let text = document.getElementById("myinput").value.toLowerCase();
+    
+    filter = courses.filter(function(x) {
+      if(x.title.toLowerCase().includes(text)) {
+        return x.title; 
+      }
+    });
+  
+    if(this.value == "") {
+      showGallery(courses);
+      document.getElementById("para").style.display   = 'none';  
+    } else {
+      if(filter == "") {
+        document.getElementById("para").style.display = 'block';  
+        document.getElementById("card").innerHTML = "";  
+      } else {
+        showGallery(filter);
+        document.getElementById("para").style.display = 'none';  
+      }
+    }
+  });
+  
+  
