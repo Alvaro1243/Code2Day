@@ -117,18 +117,3 @@ document.getElementById("myinput").addEventListener("keyup", function() {
   }
 });
 
-
-//open detallescurso.html
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    const title = card.querySelector('h4').textContent;
-    const image = card.querySelector('img').src;
-    const rating = card.querySelector('.fa-star').length;
-    const description = card.querySelector('p').textContent;
-
-    const url = `detallescurso.html?title=${title}&image=${image}&rating=${rating}&description=${description}&date=${date}`;
-
-    window.location.href = url;
-  });
-});
