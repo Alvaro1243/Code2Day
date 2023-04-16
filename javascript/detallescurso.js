@@ -17,3 +17,49 @@ var enlace = document.getElementById("inscribirse");
 if(inscrito==1){
     enlace.style.visibility="hidden";
 }
+
+
+//Comment section:
+const nameInput = document.getElementById('username');
+const commentInput = document.getElementById('comment');
+const addButton = document.getElementById('add-comment-btn');
+const cancelButton = document.getElementById('cancel-btn');
+const commentsSection = document.getElementById('comment-section');
+
+
+addButton.addEventListener('click', () => {
+
+  const nameValue = nameInput.value.trim();
+  const commentValue = commentInput.value.trim();
+
+  if (nameValue !== '' && commentValue !== '') {
+
+    const commentElement = document.createElement('div');
+    commentElement.classList.add('card', 'mb-3');
+
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.classList.add('card-body');
+
+    const nameElement = document.createElement('h6');
+    nameElement.classList.add('fw-bold', 'text-primary', 'mb-1');
+    nameElement.textContent = nameValue;
+
+    const commentTextElement = document.createElement('p');
+    commentTextElement.classList.add('card-text');
+    commentTextElement.textContent = commentValue;
+
+    cardBodyElement.appendChild(nameElement);
+    cardBodyElement.appendChild(commentTextElement);
+    commentElement.appendChild(cardBodyElement);
+
+    commentsSection.appendChild(commentElement);
+
+    nameInput.value = '';
+    commentInput.value = '';
+  }
+});
+
+cancelButton.addEventListener('click', () => {
+  nameInput.value = '';
+  commentInput.value = '';
+});
