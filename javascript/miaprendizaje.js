@@ -48,7 +48,7 @@ function showGallery(currarray) {
           ${rating}
         </div>
         <p class="mt-2">${currarray[i].description}</p>
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}"&inscrito=${1} class="btn btn-primary">Ir al Curso</a><br>
+        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}" class="btn btn-primary">Ir al Curso</a><br>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Eliminar Curso
         </button>
