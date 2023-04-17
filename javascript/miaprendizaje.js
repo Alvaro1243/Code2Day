@@ -1,3 +1,5 @@
+let filter = []
+
 let courses = [
   {
     title: 'Curso HTML',
@@ -47,7 +49,7 @@ function showGallery(currarray) {
         <div class="d-flex justify-content-center">
           ${rating}
         </div>
-        <p class="mt-2">${currarray[i].description}</p>
+        <p class="mt-2"></p>
         <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}" class="btn btn-primary">Ir al Curso</a><br>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Eliminar Curso
@@ -55,11 +57,12 @@ function showGallery(currarray) {
       </div>
     `;
 
-    // Add event listener to the "Eliminar Curso" button
+
+    //eliminar
     var deleteButton = cardElement.querySelector("button");
     deleteButton.addEventListener("click", function () {
       var card = this.parentNode;
-      // Open the Bootstrap modal and set up the "Sí" button to delete the card
+
       var modal = document.getElementById("exampleModal");
       modal.querySelector("#eliminar").addEventListener("click", function () {
         var nodeList = card.childNodes;
@@ -83,4 +86,27 @@ function showGallery(currarray) {
 }
 
 
-
+//search
+document.getElementById("myinput").addEventListener("keyup", function() {
+    let text = document.getElementById("myinput").value.toLowerCase();
+    
+    filter = courses.filter(function(x) {
+      if(x.title.toLowerCase().includes(text) || x.description.toLowerCase().includes(text)) {
+        return x.title; 
+      }
+    });
+  
+    if(this.value == "") {
+      showGallery(courses);
+      document.getElementById("para").style.display   = 'none';  
+    } else {
+      if(filter == "") {
+        document.getElementById("para").style.display = 'block';  
+        document.getElementById("card").innerHTML = "";  
+      } else {
+        showGallery(filter);
+        document.getElementById("para").style.display = 'none';  
+      }
+    }
+  });
+  
