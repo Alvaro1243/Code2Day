@@ -69,10 +69,11 @@
               el correo es invalido o no existe
             </div>
                 <label for="contraseña" class="form-label"><strong>Contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" id="contraseña" required>
-                <span class="form-text" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
+                <input type="password" class="form-control" id="contraseña" minlength="6" required>
+                <span class="form-text text-danger" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
                 <label for="repetirContraseña" class="form-label"><strong>Repita la contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" id="repitaContraseña" required>
+                <input type="password" class="form-control" id="repitaContraseña"  required>
+                <span class="form-text text-danger" id="pwdRepError">Las contraseñas no coinciden</span><br/>
             </div>
         </div>
         <div class="p-2 row bg-light">
@@ -86,9 +87,34 @@
         </div>
         <div class="p-3">
             <input type="submit" value="Enviar" class="btn bg-primary text-light" id="enviar">
-            <input type="submit" value="Cancelar" class="btn border-opacity-10" id="cancelar">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#cancelModal">
+              Cancelar
+            </button>
         </div>
       </form>
+
+     
+
+      <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cancelar</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ¿Desea cancelar la inscripción?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='cursos.html'" >Sí</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
       <script src="./javascript/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
