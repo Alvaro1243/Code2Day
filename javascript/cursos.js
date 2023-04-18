@@ -90,7 +90,7 @@ function showGallery(currarray) {
         ${rating}
       </div>
         <p class="mt-2"></p>
-        <a href="formulario.html" class="btn btn-primary" id="inscribirse">Inscribirse</a>
+        <a href="login.html" class="btn btn-primary" id="inscribirse">Inscribirse</a>
       </div>
     </div>`
   }
