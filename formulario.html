@@ -39,7 +39,7 @@
       </div>
     </div>
   </nav>
-<form id = "formulario" action="cursos.html" class = "container needs-validation" novalidate>
+<form id = "formulario"  action="" class = "container needs-validation" novalidate>
     <div class = "mb-3">
         <div class="p-2 row bg-light text-center">
             <legend>Información personal</legend>
@@ -90,6 +90,9 @@
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#cancelModal">
               Cancelar
             </button>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#okModal" hidden id="trigger">
+              Cancelar
+            </button>
         </div>
       </form>
 
@@ -103,7 +106,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ¿Desea cancelar la inscripción?
+              ¿Desea cancelar la operación?
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -113,7 +116,22 @@
         </div>
       </div>
       
-
+      <div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Mensaje</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Se ha inscrito con éxito
+            </div>
+            <div class="modal-footer">
+              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='miaprendizaje.html'" >Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <script src="./javascript/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

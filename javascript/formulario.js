@@ -1,4 +1,3 @@
-
 (() => {
   'use strict'
 
@@ -11,6 +10,10 @@
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
+      }else{
+        event.preventDefault();
+        var trigger = document.getElementById("trigger")
+        trigger.click();
       }
       form.classList.add('was-validated')
     }, false)
@@ -23,7 +26,6 @@ const pwdError = document.getElementById("pwdError")
 const pwdRepError = document.getElementById("pwdRepError") 
 const contraseña = document.getElementById("contraseña")
 const repetirContraseña = document.getElementById("repitaContraseña")
-
 
 repetirContraseña.onkeyup = function(){
   if(repetirContraseña.value != contraseña.value){
