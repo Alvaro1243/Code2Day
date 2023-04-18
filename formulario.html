@@ -30,10 +30,16 @@
             <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="miaprendizaje.html">Mi Aprendizaje</a>
+            <a class="nav-link" href="miaprendizaje.html" id="misCursos">Mi Aprendizaje</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="perfil.html">Perfil</a>
+            <a class="nav-link" href="perfil.html" id="perfil">Perfil</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="login.html" id="inicioSesion">Inicio sesión</a>
+          </li>
+          <li class="navbar-item">
+            <a class="nav-link" href="index.html?login=null" id="cierreSesión">Cerrar sesión</a>
           </li>
         </ul>
       </div>
@@ -110,7 +116,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='cursos.html'" >Sí</button>
+              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='cursos.html?login=1'" >Sí</button>
             </div>
           </div>
         </div>
@@ -127,7 +133,7 @@
               Se ha inscrito con éxito
             </div>
             <div class="modal-footer">
-              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='miaprendizaje.html'" >Ok</button>
+              <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='miaprendizaje.html?login=1'" >Ok</button>
             </div>
           </div>
         </div>

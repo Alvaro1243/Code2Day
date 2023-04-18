@@ -16,33 +16,39 @@
     <body>
       <div id="wrapper">
       <div id="content">
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="images/logo2.PNG" id="logo" class="card-img-top" alt="Image not found"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="cursos.html">Cursos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
-              </li>
-              <li class="navbar-item">
-                <a class="nav-link" href="miaprendizaje.html">Mi Aprendizaje</a>
-              </li>
-              <li class="navbar-item">
-                <a class="nav-link" href="perfil.html">Perfil</a>
-              </li>
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo2.PNG" id="logo" class="card-img-top" alt="Image not found"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="cursos.html">Cursos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="navbar-item">
+                  <a class="nav-link" href="miaprendizaje.html" id="misCursos">Mi Aprendizaje</a>
+                </li>
+                <li class="navbar-item">
+                  <a class="nav-link" href="perfil.html" id="perfil">Perfil</a>
+                </li>
+                <li class="navbar-item">
+                  <a class="nav-link" href="login.html" id="inicioSesion">Inicio sesión</a>
+                </li>
+                <li class="navbar-item">
+                  <a class="nav-link" href="index.html?login=null" id="cierreSesión">Cerrar sesión</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       
 
         <header>
@@ -88,6 +94,43 @@
         </footer>
         </div>
 
+        <div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Mensaje</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ¿Desea inscribirse al curso?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button id="aceptar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='miaprendizaje.html?login=1'" >Si</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#afModal" hidden id="trigger">
+          
+        </button>
+        <div class="modal fade" id="afModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Mensaje</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Se ha inscrito con éxito
+              </div>
+              <div class="modal-footer">
+                <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='miaprendizaje.html?login=1'" >Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <script src="./javascript/cursos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

@@ -1,5 +1,8 @@
 let filter = []
 
+const urlParams = new URLSearchParams(window.location.search);
+const login = urlParams.get('login');
+
 let courses = [
   {
     title: 'Curso C++',
@@ -81,13 +84,13 @@ function showGallery(currarray) {
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
-      <a href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><img src="${currarray[i].image}"/></a>
-        <a href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><h4 class="text-capitalize text-center">${currarray[i].title}</h4></a>
+      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><img src="${currarray[i].image}"/></a>
+        <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><h4 class="text-capitalize text-center">${currarray[i].title}</h4></a>
         <div class="d-flex justify-content-center">
         ${rating}
       </div>
         <p class="mt-2"></p>
-        <a href="formulario.html" class="btn btn-primary">Inscribirse</a>
+        <a href="formulario.html" class="btn btn-primary" id="inscribirse">Inscribirse</a>
       </div>
     </div>`
   }
@@ -116,4 +119,55 @@ document.getElementById("myinput").addEventListener("keyup", function() {
     }
   }
 });
+
+const enlaces = document.querySelectorAll("a:not(.especial)")
+
+
+Array.from(enlaces).forEach(a => {
+  a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
+})
+
+const button = document.getElementById("aceptar")
+
+button.onclick = function(){
+  var b = document.getElementById("trigger")
+  b.click();
+}
+
+const especiales = document.querySelectorAll(".especial")
+
+Array.from(especiales).forEach(a => {
+  a.setAttribute("href",a.getAttribute("href")+"&login=" + login);
+})
+
+
+
+const perfil = document.getElementById('perfil')
+const inicioSesion = document.getElementById('inicioSesion')
+const cierreSesion = document.getElementById('cierreSesión')
+const misCursos = document.getElementById('misCursos')
+cierreSesion.setAttribute("href","index.html?login=null")
+
+if(login=='null'){
+    perfil.style.visibility = "hidden"
+    inicioSesion.style.visibility = "visible"
+    cierreSesion.style.visibility = "hidden"
+    misCursos.style.visibility = "hidden"
+}else{
+  perfil.style.visibility = "visible"
+  inicioSesion.style.visibility = "hidden"
+  cierreSesion.style.visibility = "visible"
+  misCursos.style.visibility = "visible"
+  const buttons = document.querySelectorAll("#inscribirse")
+
+  Array.from(buttons).forEach(a => {
+  a.setAttribute("data-bs-toggle",'modal');
+  a.setAttribute("data-bs-target",'#okModal');
+})
+}
+
+
+
+
+
 

@@ -40,10 +40,10 @@ function showGallery(currarray) {
     cardElement.classList.add("col-md-4", "mt-3");
     cardElement.innerHTML = `
       <div class="card p-3 ps-5 pe-3">
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
+        <a class="especial" href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
           <img src="${currarray[i].image}" />
         </a>
-        <a href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
+        <a class="especial" href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
           <h4 class="text-capitalize text-center">${currarray[i].title}</h4>
         </a>
         <div class="d-flex justify-content-center">
@@ -109,4 +109,37 @@ document.getElementById("myinput").addEventListener("keyup", function() {
       }
     }
   });
+
+const urlParams = new URLSearchParams(window.location.search);
+const login = urlParams.get('login');
+const perfil = document.getElementById('perfil')
+const inicioSesion = document.getElementById('inicioSesion')
+const cierreSesion = document.getElementById('cierreSesión')
+const misCursos = document.getElementById('misCursos')
+
+
+
+if(login=='null'){
+    perfil.style.visibility = "hidden"
+    inicioSesion.style.visibility = "visible"
+    cierreSesion.style.visibility = "hidden"
+    misCursos.style.visibility = "hidden"
+
+}else{
+  perfil.style.visibility = "visible"
+  inicioSesion.style.visibility = "hidden"
+  cierreSesion.style.visibility = "visible"
+  misCursos.style.visibility = "visible"
+
+}
+
+const enlaces = document.querySelectorAll("a:not(.especial)")
+
+
+Array.from(enlaces).forEach(a => {
+  a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
+})
+
+cierreSesion.setAttribute("href","index.html?login=null")
+
   
