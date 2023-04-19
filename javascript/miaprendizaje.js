@@ -151,5 +151,14 @@ Array.from(botones).forEach(a => {
   i++;
 })
 
+const especiales = document.querySelectorAll("a.especial")
+
+Array.from(especiales).forEach(a => {
+  a.setAttribute("href",a.getAttribute("href")+"&login=" + login);
+})
+
+console.log(login)
+console.log(especiales)
+
 
   
