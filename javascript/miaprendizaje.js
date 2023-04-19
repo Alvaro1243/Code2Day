@@ -157,8 +157,6 @@ Array.from(especiales).forEach(a => {
   a.setAttribute("href",a.getAttribute("href")+"&login=" + login);
 })
 
-console.log(login)
-console.log(especiales)
 
 
   
