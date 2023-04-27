@@ -78,13 +78,13 @@ function showGallery(currarray) {
   for(var i=0; i<currarray.length; i++) {
     var rating = "";
     for(var j=0; j<currarray[i].rating; j++) {
-      rating += '<i id="star" class="fa fa-star"></i>';
+      rating += '<span id="star" class="fa fa-star"></span>';
     }
 
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
-      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><img src="${currarray[i].image}" alt="Image not found"/></a>
+      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}" alt="Image not found"><img src="${currarray[i].image}"/></a>
         <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><h4 class="text-capitalize text-center">${currarray[i].title}</h4></a>
         <div class="d-flex justify-content-center">
         ${rating}
