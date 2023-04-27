@@ -77,15 +77,15 @@
         <div class="p-3 row">
             <div class="col-4">
                 <label for="correo" class="form-label"><strong>Correo electrónico</strong><span class="text-danger fs-5">*</span></label><br/>
-                <input type="email" class="form-control" id="correo" required>
+                <input type="email" class="form-control" name= "Correo" id="correo" required aria-label="Ingrese su correo" tabindex="6">
             <div class = "invalid-feedback">
               el correo es invalido o no existe
             </div>
                 <label for="contraseña" class="form-label"><strong>Contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" name= "Contraseña" id="contraseña" minlength="6" required>
+                <input type="password" class="form-control" name= "Contraseña" id="contraseña" minlength="6" required aria-label="Ingrese su contraseña" tabindex="7">>
                 <span class="form-text text-danger" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
                 <label for="repetirContraseña" class="form-label"><strong>Repita la contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" name= "Repetir contraseña" id="repitaContraseña"  required>
+                <input type="password" class="form-control" name= "Repetir contraseña" id="repitaContraseña"  required aria-label="Repita su contraseña" tabindex="8">
                 <span class="form-text text-danger" id="pwdRepError">Las contraseñas no coinciden</span><br/>
             </div>
         </div>
@@ -95,7 +95,7 @@
         <div class="p-3 row">
             <div class="col-4">
                 <label for="telefono" class="form-label"><strong>Teléfono</strong><span class="text-danger fs-5">*</span></label>
-                <input type="text" class="form-control" id="telefono" required>
+                <input type="text" class="form-control" name= "Teléfono" id="telefono" required aria-label="Ingrese su número de teléfono" tabindex="9">
             </div>
         </div>
         <div class="p-3">
