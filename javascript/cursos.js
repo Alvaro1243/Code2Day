@@ -84,7 +84,7 @@ function showGallery(currarray) {
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
-      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}" alt="not found"><img src="${currarray[i].image}" alt="Image not found"/></a>
+      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}" alt="not found"><img src="${currarray[i].image}" alt="Image not found" longdesc=""/></a>
         <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><span id="title" class="fw-bold text-primary mb-1 fs-4 text-center">${currarray[i].title}</span></a>
         <div class="d-flex justify-content-center">
         ${rating}
