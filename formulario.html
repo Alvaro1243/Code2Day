@@ -111,7 +111,7 @@
 
      
 
-      <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" aria-describedby='modalDescription' role='dialog' id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -119,7 +119,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ¿Desea cancelar la operación?
+              <p id="modalDescription">¿Desea cancelar la operación?</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -129,7 +129,7 @@
         </div>
       </div>
       
-      <div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" aria-describedby='exito' role='dialog' id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -137,7 +137,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              Se ha inscrito con éxito
+              <p id="exito">Se ha inscrito con éxito</p>
             </div>
             <div class="modal-footer">
               <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='index.html?login=1'" >Ok</button>

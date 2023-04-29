@@ -114,15 +114,16 @@ document.getElementById("myinput").addEventListener("keyup", function() {
       document.getElementById("para").style.display = 'block';  
       document.getElementById("card").innerHTML = "";  
     } else {
-      showGallery(filter);
-      const buttons = document.querySelectorAll("#inscribirse")
-      Array.from(buttons).forEach(a => {
-      a.setAttribute("data-bs-toggle",'modal');
-      a.setAttribute("data-bs-target",'#okModal');
-})
       document.getElementById("para").style.display = 'none';  
     }
   }
+  showGallery(filter);
+  const buttons = document.querySelectorAll("#inscribirse")
+  Array.from(buttons).forEach(a => {
+  a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
+  a.setAttribute("data-bs-toggle",'modal');
+  a.setAttribute("data-bs-target",'#okModal');
+})
 });
 
 const enlaces = document.querySelectorAll("a:not(.especial)")
