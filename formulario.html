@@ -65,10 +65,11 @@
             <input type="date" class="form-control" name="Fecha de nacimiento" id="fechaNacimiento" required aria-label="Ingrese su fecha de nacimiento" tabindex="3">
           </div>
           <div class="col-7">
-            <label for="genero" class="form-label"><strong>Género</strong><span class="text-danger fs-5">*</span></label><br>
-            <label for="genero-masculino"><input type="radio" name="gender" value="male" id="genero-masculino" required aria-label="Seleccione Hombre" tabindex="4"> Hombre </label><br>
-            <label for="genero-femenino"><input type="radio" name="gender" value="female" id="genero-femenino" required aria-label="Seleccione Mujer" tabindex="5"> Mujer </label>
-          </div>
+            <fieldset>
+              <legend>Género</legend>
+              <label for="genero-masculino"><input type="radio" name="gender" value="male" id="genero-masculino" required aria-label="Hombre" tabindex="4"> Hombre </label><br>
+              <label for="genero-femenino"><input type="radio" name="gender" value="female" id="genero-femenino" required aria-label="Mujer" tabindex="5"> Mujer </label>
+            </fieldset></div>
         </div>
       </div>
         <div class="p-2 row bg-light">
@@ -111,7 +112,7 @@
 
      
 
-      <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" aria-describedby='modalDescription' role='dialog' id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -119,7 +120,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ¿Desea cancelar la operación?
+              <p id="modalDescription">¿Desea cancelar la operación?</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -129,7 +130,7 @@
         </div>
       </div>
       
-      <div class="modal fade" id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" aria-describedby='exito' role='dialog' id="okModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -137,7 +138,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              Se ha inscrito con éxito
+              <p id="exito">Se ha inscrito con éxito</p>
             </div>
             <div class="modal-footer">
               <button id="eliminar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='index.html?login=1'" >Ok</button>

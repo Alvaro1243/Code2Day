@@ -70,7 +70,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" aria-describedby='modalDescription' role='dialog' id="signModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -78,7 +78,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Ha iniciado sesión
+          <p id="modalDescription">Ha iniciado sesión</p>
         </div>
         <div class="modal-footer">
           <button id="confirmar" type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='index.html?login=1'">Ok</button>
