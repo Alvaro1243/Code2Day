@@ -25,7 +25,7 @@
 const pwdError = document.getElementById("pwdError")
 const pwdRepError = document.getElementById("pwdRepError") 
 const contraseña = document.getElementById("contraseña")
-const repetirContraseña = document.getElementById("repitaContraseña")
+const repetirContraseña = document.getElementById("repetirContraseña")
 
 repetirContraseña.onkeyup = function(){
   if(repetirContraseña.value != contraseña.value){
