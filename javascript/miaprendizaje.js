@@ -40,9 +40,7 @@ function showGallery(currarray) {
     cardElement.classList.add("col-md-4", "mt-3");
     cardElement.innerHTML = `
       <div class="card p-3 ps-5 pe-3">
-        <a class="especial" href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
-          <img src="${currarray[i].image}" />
-        </a>
+        <img src="${currarray[i].image}" alt="${currarray[i].title}" />
         <a class="especial" href="./detallescurso.html?title=${currarray[i].title}&image=${currarray[i].image}&rating=${currarray[i].rating}&description=${currarray[i].description}&date=${currarray[i].date}&inscrito=${1}">
           <h4 class="text-capitalize text-center">${currarray[i].title}</h4>
         </a>

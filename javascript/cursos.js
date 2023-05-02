@@ -61,7 +61,7 @@ let courses = [
     date: '20/03/2023'
   },
   {
-    title: 'Curso_PHP',
+    title: 'Curso PHP',
     image: 'images/php.jpg',
     rating: 5,
     description: 'Para aprender a programar en este lenguaje de servidor, cubriendo conceptos básicos como variables, estructuras de control, funciones, manejo de formularios y bases de datos.',
@@ -84,7 +84,8 @@ function showGallery(currarray) {
     document.getElementById("card").innerHTML += ` 
       <div class="col-md-4 mt-3">
       <div class="card p-3 ps-5 pe-3">
-      <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}" alt="not found"><img src="${currarray[i].image}" alt="${currarray[i].title}" longdesc=""/></a>
+
+      <img src="${currarray[i].image}" alt="${currarray[i].title}"/>
         <a class = "especial" href="./detallescurso.html?title=${encodeURIComponent(currarray[i].title)}&image=${encodeURIComponent(currarray[i].image)}&rating=${currarray[i].rating}&description=${encodeURIComponent(currarray[i].description)}&date=${currarray[i].date}&inscrito=${0}"><span id="title" class="fw-bold text-primary mb-1 fs-4 text-center">${currarray[i].title}</span></a>
         <div class="d-flex justify-content-center">
         ${rating}
