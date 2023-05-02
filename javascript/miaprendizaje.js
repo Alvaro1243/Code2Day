@@ -108,6 +108,13 @@ document.getElementById("myinput").addEventListener("keyup", function() {
         document.getElementById("para").style.display = 'none';  
       }
     }
+    const botones = document.querySelectorAll("#botonInscribir")
+    var i = 0;
+    Array.from(botones).forEach(a => {
+    a.setAttribute("href","./detallescurso.html?title="+courses[i].title+ "&image="+courses[i].image+"&rating="+
+    courses[i].rating+"&description="+courses[i].description+"&date="+courses[i].date+"&inscrito="+ 1 + "&login="+login);
+    i++;
+})
   });
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -143,13 +150,7 @@ Array.from(enlaces).forEach(a => {
 
 cierreSesion.setAttribute("href","index.html?login=null")
 
-const botones = document.querySelectorAll("#botonInscribir")
-var i = 0;
-Array.from(botones).forEach(a => {
-  a.setAttribute("href","./detallescurso.html?title="+courses[i].title+ "&image="+courses[i].image+"&rating="+
-  courses[i].rating+"&description="+courses[i].description+"&date="+courses[i].date+"&inscrito="+ 1 + "&login="+login);
-  i++;
-})
+
 
 const especiales = document.querySelectorAll("a.especial")
 
