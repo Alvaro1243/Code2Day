@@ -78,7 +78,7 @@ function showGallery(currarray) {
   for(var i=0; i<currarray.length; i++) {
     var rating = "";
     for(var j=0; j<currarray[i].rating; j++) {
-      rating += '<i id="star" class="fa fa-star"></i>';
+      rating += '<span id="star" class="fa fa-star"></span>';
     }
 
     document.getElementById("card").innerHTML += ` 
