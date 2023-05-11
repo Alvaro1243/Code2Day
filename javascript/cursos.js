@@ -152,6 +152,7 @@ Array.from(especiales).forEach(a => {
 const perfil = document.getElementById('perfil')
 const inicioSesion = document.getElementById('inicioSesion')
 const cierreSesion = document.getElementById('cierreSesión')
+const registrar = document.getElementById('registrar')
 const misCursos = document.getElementById('misCursos')
 cierreSesion.setAttribute("href","index.html?login=null")
 
@@ -159,11 +160,13 @@ if(login=='null'){
     perfil.style.visibility = "hidden"
     inicioSesion.style.visibility = "visible"
     cierreSesion.style.visibility = "hidden"
+    registrar.style.visibility = "visible"
     misCursos.style.visibility = "hidden"
 }else{
   perfil.style.visibility = "visible"
   inicioSesion.style.visibility = "hidden"
   cierreSesion.style.visibility = "visible"
+  registrar.style.visibility = "hidden"
   misCursos.style.visibility = "visible"
   const buttons = document.querySelectorAll("#inscribirse")
 

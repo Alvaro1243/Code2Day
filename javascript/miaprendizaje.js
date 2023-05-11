@@ -131,7 +131,6 @@ const cierreSesion = document.getElementById('cierreSesión')
 const misCursos = document.getElementById('misCursos')
 
 
-
 if(login=='null'){
     perfil.style.visibility = "hidden"
     inicioSesion.style.visibility = "visible"

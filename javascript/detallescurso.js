@@ -72,18 +72,18 @@ const perfil = document.getElementById('perfil')
 const inicioSesion = document.getElementById('inicioSesion')
 const cierreSesion = document.getElementById('cierreSesión')
 const misCursos = document.getElementById('misCursos')
-
-
-
+const registrar = document.getElementById('registrar')
 
 
 if(login=='null'){
     perfil.style.visibility = "hidden"
     inicioSesion.style.visibility = "visible"
+    registrar.style.visibility = "visible"
     cierreSesion.style.visibility = "hidden"
     misCursos.style.visibility = "hidden"
 }else{
   perfil.style.visibility = "visible"
+  registrar.style.visibility = "hidden"
   inicioSesion.style.visibility = "hidden"
   cierreSesion.style.visibility = "visible"
   misCursos.style.visibility = "visible"
@@ -109,4 +109,9 @@ button.onclick = function(){
   b.click();
 }
 
+const button2 = document.getElementById("add-comment-btn")
 
+button2.onclick = function(){
+var b1 = document.getElementById("triggerComentario")
+b1.click();
+}
