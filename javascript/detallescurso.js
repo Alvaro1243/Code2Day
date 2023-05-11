@@ -109,4 +109,9 @@ button.onclick = function(){
   b.click();
 }
 
+const button2 = document.getElementById("add-comment-btn")
 
+button2.onclick = function(){
+var b1 = document.getElementById("triggerComentario")
+b1.click();
+}
