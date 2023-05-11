@@ -84,6 +84,14 @@ function showGallery(currarray) {
 }
 
 
+const button = document.getElementById("eliminar")
+
+button.onclick = function(){
+var b = document.getElementById("trigger")
+b.click();
+}
+
+
 //search
 document.getElementById("myinput").addEventListener("keyup", function() {
     let text = document.getElementById("myinput").value.toLowerCase();
