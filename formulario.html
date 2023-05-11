@@ -21,25 +21,25 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html" tabindex="0">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="cursos.html">Cursos</a>
+            <a class="nav-link active" href="cursos.html" tabindex="0">Cursos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+            <a class="nav-link" href="sobrenosotros.html" tabindex="0">Sobre Nosotros</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="miaprendizaje.html" id="misCursos">Mi Aprendizaje</a>
+            <a class="nav-link" href="miaprendizaje.html" id="misCursos" tabindex="0">Mi Aprendizaje</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="perfil.html" id="perfil">Perfil</a>
+            <a class="nav-link" href="perfil.html" id="perfil" tabindex="0">Perfil</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="login.html" id="inicioSesion">Inicio sesión</a>
+            <a class="nav-link" href="login.html" id="inicioSesion" tabindex="0">Inicio sesión</a>
           </li>
           <li class="navbar-item">
-            <a class="nav-link" href="index.html?login=null" id="cierreSesión">Cerrar sesión</a>
+            <a class="nav-link" href="index.html?login=null" id="cierreSesión" tabindex="0">Cerrar sesión</a>
           </li>
         </ul>
       </div>
@@ -54,21 +54,21 @@
         <div class="row align-items-start">
           <div class="col-7">
             <label for="nombre" class="form-label"><strong>Nombre</strong><span class="text-danger fs-5">*</span></label>
-            <input type="text" class="form-control" name="Nombre" id="nombre" required aria-label="Ingrese su nombre" tabindex="1">
+            <input type="text" class="form-control" name="Nombre" id="nombre" required aria-label="Ingrese su nombre" tabindex="0">
           </div>
           <div class="col-7">
             <label for="apellidos" class="form-label"><strong>Apellidos</strong><span class="text-danger fs-5">*</span></label>
-            <input type="text" class="form-control" name="Apellidos" id="apellidos" required aria-label="Ingrese sus apellidos" tabindex="2">
+            <input type="text" class="form-control" name="Apellidos" id="apellidos" required aria-label="Ingrese sus apellidos" tabindex="0">
           </div>
           <div class="col-7">
             <label for="fechaNacimiento" class="form-label"><strong>Fecha de nacimiento</strong><span class="text-danger fs-5">*</span></label>
-            <input type="date" class="form-control" name="Fecha de nacimiento" id="fechaNacimiento" required aria-label="Ingrese su fecha de nacimiento" tabindex="3">
+            <input type="date" class="form-control" name="Fecha de nacimiento" id="fechaNacimiento" required aria-label="Ingrese su fecha de nacimiento" tabindex="0">
           </div>
           <div class="col-7">
             <fieldset>
               <legend>Género</legend>
-              <label for="genero-masculino"><input type="radio" name="gender" value="male" id="genero-masculino" required aria-label="Hombre" tabindex="4"> Hombre </label><br>
-              <label for="genero-femenino"><input type="radio" name="gender" value="female" id="genero-femenino" required aria-label="Mujer" tabindex="5"> Mujer </label>
+              <label for="genero-masculino"><input type="radio" name="gender" value="male" id="genero-masculino" required aria-label="Hombre" tabindex="0"> Hombre </label><br>
+              <label for="genero-femenino"><input type="radio" name="gender" value="female" id="genero-femenino" required aria-label="Mujer" tabindex="0"> Mujer </label>
             </fieldset></div>
         </div>
       </div>
@@ -78,15 +78,15 @@
         <div class="p-3 row">
             <div class="col-4">
                 <label for="correo" class="form-label"><strong>Correo electrónico</strong><span class="text-danger fs-5">*</span></label><br/>
-                <input type="email" class="form-control" name= "Correo" id="correo" required aria-label="Ingrese su correo" tabindex="6">
+                <input type="email" class="form-control" name= "Correo" id="correo" required aria-label="Ingrese su correo" tabindex="0">
             <div class = "invalid-feedback">
               el correo es invalido o no existe
             </div>
                 <label for="contraseña" class="form-label"><strong>Contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" name= "Contraseña" id="contraseña" minlength="6" required aria-label="Ingrese su contraseña" tabindex="7">
+                <input type="password" class="form-control" name= "Contraseña" id="contraseña" minlength="6" required aria-label="Ingrese su contraseña" tabindex="0">
                 <span class="form-text text-danger" id="pwdError">La contraseña debe contener al menos 6 caractéres</span><br/>
                 <label for="repetirContraseña" class="form-label"><strong>Repita la contraseña</strong><span class="text-danger fs-5">*</span></label>
-                <input type="password" class="form-control" id="repetirContraseña"  required aria-label="Repita la contraseña" tabindex="8">
+                <input type="password" class="form-control" id="repetirContraseña"  required aria-label="Repita la contraseña" tabindex="0">
                 <span class="form-text text-danger" id="pwdRepError">Las contraseñas no coinciden</span><br/>
             </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="p-3 row">
             <div class="col-4">
                 <label for="telefono" class="form-label"><strong>Teléfono</strong><span class="text-danger fs-5">*</span></label>
-                <input type="text" class="form-control" name= "Teléfono" id="telefono" required aria-label="Ingrese su número de teléfono" tabindex="9">
+                <input type="text" class="form-control" name= "Teléfono" id="telefono" required aria-label="Ingrese su número de teléfono" tabindex="0">
             </div>
         </div>
         <div class="p-3">
