@@ -1,0 +1,1 @@
+La plataforma GitHub despliega automáticamente la página y lo único que hay que hacer es acceder al enlace.
