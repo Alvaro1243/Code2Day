@@ -147,21 +147,19 @@ if(login=='null'){
 
 const enlaces = document.querySelectorAll("a:not(.especial)")
 
-
 Array.from(enlaces).forEach(a => {
   a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
+  console.log(a.getAttribute("href"));
 })
-
-
-cierreSesion.setAttribute("href","index.html?login=null")
-
-
 
 const especiales = document.querySelectorAll("a.especial")
 
 Array.from(especiales).forEach(a => {
   a.setAttribute("href",a.getAttribute("href")+"&login=" + login);
 })
+
+cierreSesion.setAttribute("href","index.html?login=null")
+
 
 const botones = document.querySelectorAll("#botonInscribir")
 var i = 0;

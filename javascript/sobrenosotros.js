@@ -9,8 +9,6 @@ const registrar = document.getElementById('registrar')
 
 const enlaces = document.querySelectorAll("a:not(#cierreSesión)")
 
-
-
 Array.from(enlaces).forEach(a => {
   a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
 })
