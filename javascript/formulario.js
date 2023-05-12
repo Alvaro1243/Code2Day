@@ -22,26 +22,7 @@
 
 })()
 
-const pwdError = document.getElementById("pwdError")
-const pwdRepError = document.getElementById("pwdRepError") 
-const contraseña = document.getElementById("contraseña")
-const repetirContraseña = document.getElementById("repetirContraseña")
 
-repetirContraseña.onkeyup = function(){
-  if(repetirContraseña.value != contraseña.value){
-    pwdRepError.style.display = "initial"
-  }else{
-    pwdRepError.style.display = "none"
-  }
-}
-
-contraseña.onkeyup = function(){
-  if(contraseña.value.length<6){
-    pwdError.style.display = "initial"
-  }else{
-    pwdError.style.display = "none"
-  }
-}
 
 const urlParams = new URLSearchParams(window.location.search);
 const login = urlParams.get('login');
@@ -73,6 +54,26 @@ console.log(enlaces)
 Array.from(enlaces).forEach(a => {
   a.setAttribute("href",a.getAttribute("href")+"?login=" + login);
 })
+
+function ComprobarContraseña(){
+ pwdRepError = document.getElementById("pwdRepError") 
+ contraseña = document.getElementById("contraseña")
+ repetirContraseña = document.getElementById("repetirContraseña")
+ pwdError = document.getElementById("pwdError")
+
+if(contraseña.value.length>=6){
+  pwdError.style.display = "none"
+}else{
+  pwdError.style.display = "initial"
+}
+
+ if(contraseña.value != repetirContraseña.value){
+  pwdRepError.style.display = "initial"
+  }else{
+    pwdRepError.style.display = "none"
+ }
+
+}
 
 
 
