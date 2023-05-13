@@ -46,46 +46,82 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav><br>
 
     <header>
 
     </header>
     
     <div id="wrapper">
-    <div id="content">    
-    <h1>Perfil de Usuario</h2>
-    <div class = "fluid-container">
-        <div class = "row">
-            <div class = "col">
-                <div class = "card">
-                    <div class = "card-body">
-                        <h2 class = "card-title">Informacion de Usuario</h2>
-                        Nombre : Juan <br/>
-                        Primer apellido : Molina <br/>
-                        Segundo apellido : Muñoz <br/>
-                        Género : Hombre <br/>
-                        Edad : 25 <br/>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <div class = "row">
-            <div class = "col">
-                <div class = "card">
-                    <div class= "card-body">
-                        <h2 class = "card-title">Informacion de contacto</h2>
-                        Correo electrónico : example@gmail.com <br/>
-                        Teléfono : 123456789 <br/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div id="content">    
+          <h1>Visualizando tu perfil</h1><br>
+          <form>
+              <div class="fluid-container">
+                  <div class="row">
+                      <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                  <h2 class="card-title">Tu información</h2>
+                                  <div class="form-group row">
+                                      <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="nombre" value="Juan" readonly>
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="primerApellido" class="col-sm-2 col-form-label">Primer Apellido:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="primerApellido" value="Molina" readonly>
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="segundoApellido" class="col-sm-2 col-form-label">Segundo Apellido:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="segundoApellido" value="Muñoz" readonly>
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="genero" class="col-sm-2 col-form-label">Género:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="genero" value="Hombre" readonly>
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="edad" class="col-sm-2 col-form-label">Edad:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="edad" value="25" readonly>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div><br>
+                  <div class="row">
+                      <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                  <h2 class="card-title">Información de Contacto</h2>
+                                  <div class="form-group row">
+                                      <label for="email" class="col-sm-2 col-form-label">Correo electrónico:</label>
+                                      <div class="col-sm-2">
+                                          <input type="email" class="form-control" id="email" value="example@gmail.com" readonly>
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="telefono" class="col-sm-2 col-form-label">Teléfono:</label>
+                                      <div class="col-sm-2">
+                                          <input type="text" class="form-control" id="telefono" value="123456789" readonly>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
   </div>
-</div>
- 
+  
     
     
     <div id="footer">
