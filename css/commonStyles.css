@@ -43,16 +43,19 @@ nav ul li {
 
 #home {
     background-image: linear-gradient(to bottom right, #7B9DCC, #576490);
-    height: 50vh;
+    height: 60vh;
 }
 
 #headtext {
     color: white;
-    padding-top: 40px;
+    padding-top: 50px;
+    font-size: 50px;
 }
 
 #ptext {
     color: white;
+    padding-top: 30px;
+    font-size: 20px;
 }
 
 #buttons {
