@@ -4,6 +4,8 @@ const perfil = document.getElementById('perfil')
 const inicioSesion = document.getElementById('inicioSesion')
 const cierreSesion = document.getElementById('cierreSesión')
 const misCursos = document.getElementById('misCursos')
+const registrar = document.getElementById('registrar')
+
 
 
 
@@ -12,12 +14,14 @@ if(login=='null'){
     inicioSesion.style.visibility = "visible"
     cierreSesion.style.visibility = "hidden"
     misCursos.style.visibility = "hidden"
+    registrar.style.visibility = "visible"
 
 }else{
   perfil.style.visibility = "visible"
   inicioSesion.style.visibility = "hidden"
   cierreSesion.style.visibility = "visible"
   misCursos.style.visibility = "visible"
+  registrar.style.visibility = "hidden"
 
 }
 
