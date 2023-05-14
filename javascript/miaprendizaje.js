@@ -81,6 +81,44 @@ function showGallery(currarray) {
 
     document.getElementById("card").appendChild(cardElement);
   }
+
+  const urlParams = new URLSearchParams(window.location.search);
+const login = urlParams.get('login');
+const perfil = document.getElementById('perfil')
+const inicioSesion = document.getElementById('inicioSesion')
+const cierreSesion = document.getElementById('cierreSesión')
+const misCursos = document.getElementById('misCursos')
+const registrar = document.getElementById('registrar')
+
+
+
+if(login=='null'){
+    perfil.style.visibility = "hidden"
+    inicioSesion.style.visibility = "visible"
+    cierreSesion.style.visibility = "hidden"
+    misCursos.style.visibility = "hidden"
+    registrar.style.visibility = "visible"
+
+}else{
+  perfil.style.visibility = "visible"
+  inicioSesion.style.visibility = "hidden"
+  cierreSesion.style.visibility = "visible"
+  misCursos.style.visibility = "visible"
+  registrar.style.visibility = "hidden"
+
+}
+
+  const botones = document.querySelectorAll("#botonInscribir")
+    var i = 0;
+    Array.from(botones).forEach(a => {
+    a.setAttribute("href","./detallescurso.html?title="+courses[i].title+ "&image="+courses[i].image+"&rating="+
+    courses[i].rating+"&description="+courses[i].description+"&date="+courses[i].date+"&inscrito="+ 1 + "&login="+login);
+    i++;
+    })
+    const especiales = document.querySelectorAll("a.especial")
+    Array.from(especiales).forEach(a => {
+    a.setAttribute("href",a.getAttribute("href")+"&login=" + login);
+    })
 }
 
 
@@ -114,13 +152,6 @@ document.getElementById("myinput").addEventListener("keyup", function() {
         document.getElementById("para").style.display = 'none';  
       }
     }
-    const botones = document.querySelectorAll("#botonInscribir")
-    var i = 0;
-    Array.from(botones).forEach(a => {
-    a.setAttribute("href","./detallescurso.html?title="+courses[i].title+ "&image="+courses[i].image+"&rating="+
-    courses[i].rating+"&description="+courses[i].description+"&date="+courses[i].date+"&inscrito="+ 1 + "&login="+login);
-    i++;
-})
   });
 
 const urlParams = new URLSearchParams(window.location.search);
