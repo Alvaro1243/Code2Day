@@ -11,11 +11,12 @@
         event.preventDefault()
         event.stopPropagation()
       }else{
-        event.preventDefault();
         var trigger = document.getElementById("trigger")
         trigger.click();
+        event.preventDefault();
       }
       form.classList.add('was-validated')
+      
     }, false)
 
   })
